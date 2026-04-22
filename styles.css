@@ -1,0 +1,9 @@
+.score-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    border: 1px solid grey;
+    padding: 32px;
+}
