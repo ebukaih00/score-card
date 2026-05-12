@@ -9,10 +9,14 @@ let contEl = document.querySelector(".score-container")
 for (let i=0; i<players.length; i++){
     contEl.innerHTML += `
     <div>
-   <p > ${players[i].name}</p> 
-   <p id= "score-${i}"> ${players[i].score}</p> 
-    <button onclick= "updateScore(${i}, 1)"> + </button>
-     <button onclick= "updateScore(${i}, -1)"> + </button>
+    <div class="details">
+    <p > ${players[i].name}</p> 
+   <p id= "score-${i}"> ${players[i].score}</p> </div>
+   
+   <div class="actions">
+   <button onclick= "updateScore(${i}, 1)"> + </button>
+     <button onclick= "updateScore(${i}, -1)"> - </button></div>
+    
     </div>
     `
 }
@@ -32,5 +36,7 @@ function updateScore(index, change){
         scoreEl.style.color = "green"
     }
 
-    else (scoreEl.style.color = "black")
+    else {
+        scoreEl.style.color = "black"
+}
 }
